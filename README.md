@@ -96,6 +96,7 @@ Community maintained fork of the
         - [`pump` (Pump Monitoring)](#pump-pump-monitoring)
         - [`openaps` (OpenAPS)](#openaps-openaps)
         - [`loop` (Loop)](#loop-loop)
+        - [`override` (Override Mode)](#override-override-mode)
         - [`xdrip-js` (xDrip-js)](#xdrip-js-xdrip-js)
         - [`alexa` (Amazon Alexa)](#alexa-amazon-alexa)
         - [`speech` (Speech)](#speech-speech)
@@ -162,6 +163,10 @@ SCM_COMMAND_IDLE_TIMEOUT=300
 ```
 - See [install MongoDB, Node.js, and Nightscouton a single Windows system](https://github.com/jaylagorio/Nightscout-on-Windows-Server). if you want to host your Nightscout outside of the cloud. Although the instructions are intended for Windows Server the procedure is compatible with client versions of Windows such as Windows 7 and Windows 10.
 - If you deploy to Windows and want to develop or test you need to install [Cygwin](https://www.cygwin.com/) (use [setup-x86_64.exe](https://www.cygwin.com/setup-x86_64.exe) and make sure to install `build-essential` package. Test your configuration by executing `make` and check if all tests are ok. 
+
+# Development
+
+Wanna help with development, or just see how Nigthscout works? Great! See [CONTRIBUTING.md](CONTRIBUTING.md) for development related documentation.
 
 # Usage
 
@@ -484,6 +489,10 @@ To learn more about the Nightscout API, visit https://YOUR-SITE.com/api-docs.htm
   * `LOOP_WARN` (`30`) - The number of minutes since the last loop that needs to be exceeded before an alert is triggered
   * `LOOP_URGENT` (`60`) - The number of minutes since the last loop that needs to be exceeded before an urgent alarm is triggered
   * Add `loop` to `SHOW_FORECAST` to show forecasted BG.
+
+##### `override` (Override Mode)
+  Additional monitoring for DIY automated insulin delivery systems to display real-time overrides such as Eating Soon or Exercise Mode:
+  * Requires `DEVICESTATUS_ADVANCED="true"` to be set
 
 ##### `xdrip-js` (xDrip-js)
   Integrated xDrip-js monitoring, uses these extended settings:
